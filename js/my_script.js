@@ -41,3 +41,24 @@ toogledoc.onclick = function(e) {
 	}
 	return false;
 }
+let blockforma = document.querySelector('.blockforma');
+let button_form = document.querySelectorAll('#button_head');
+for (i = 0; i < button_form.length; i++) {
+	button_form[i].onclick = function(e) {
+		e.preventDefault();
+		blockforma.classList.remove('show-form');
+		fullfon.classList.add('fullopen');
+		blockforma.style.left = document.documentElement.clientWidth/2 - blockforma.offsetWidth/2 +'px'
+		blockforma.style.top = document.documentElement.clientHeight/2 - blockforma.offsetHeight/2 +'px'
+	}
+}
+//Black full Screen
+fullfon.onclick = function() {
+	fullfon.classList.remove('fullopen');
+	blockforma.classList.add('show-form');
+	for (i = 0; i < img.length; i++) {
+   if(img[i].classList.contains("bigimg")){
+		img[i].classList.remove("bigimg")
+	 }
+	}
+}

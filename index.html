@@ -9,8 +9,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Montserrat+Alternates:400,600&display=swap&subset=cyrillic"
 		rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
-	<link rel="shortcut icon" href="favicon1.ico" type="image/x-icon">
-
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=<4064427a-a165-4c7b-abfc-ebd58276f03f>&lang=ru_RU" type="text/javascript"></script>
 	<title>Оформление лицензии на международные автомобильные перевозки - МапКарта</title>
 </head>
 
@@ -18,7 +18,7 @@
 	<header>
 		<div class="wrap_head">
 			<div class="menu">
-				<div id="logo">
+				<div id="logo">`
 					<img src="img/logo.svg" alt="">
 					<div class="phonemob">
 						<p><a href="tel:+79271808314>" class="">+7 (927) 180-83-14</a></p>
@@ -46,7 +46,7 @@
 
 					<div class="phone">
 						<p><a href="tel:+79271808314>" class="phone_link">+7 (927) 180-83-14</a></p>
-						<a href="" class="button link">Есть вопросы</a>
+						<a href="" class="button link" id="button_head">Есть вопросы</a>
 					</div>
 				</div>
 				<h3 class="ineed">Я хочу получить:</h3>
@@ -317,6 +317,12 @@
 			</div>
 		</div>
 	</div>
+	<div id="mapyandex">
+		<h3>Наши представители</h3>
+		<div id="map" style="width:100%; height: 400px">
+		 
+		</div>
+	</div>
 	<div id="contacts">
 		<div class="into_info">
 			<div class="cont_info">
@@ -341,7 +347,7 @@
 			</div>
 			<div class="form_blcok">
 				<h3>Отправить заявку</h3>
-				<form action="" id="form">
+				<form action="" id="form_cont">
 					<input type="text" name="" id="" required="" pattern="[А-Яа-яЁё]{4,}" placeholder="Ваше Имя" maxlength="10"
 						title="Имя должно быть на русском. Пример: Степа, Петя, Вася, Оля">
 					<input type="tel" name="" id="" required="" pattern="\+[0-9]{1}[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}"
@@ -374,6 +380,9 @@
 		</div>
 	</div>
 	<script src="js/my_script.js"></script>
-</body>
-
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"> </script>
+  <script src="js/form-script.js"></script>
+	<script src="js/scroll.js"></script>
+	<script src="js/map.js"></script>
+ </body>
 </html>

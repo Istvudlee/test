@@ -913,6 +913,21 @@ header {
 }
 
 /* end comments */
+/* Map Yandex */
+#mapyandex {
+  width: 100%;
+}
+#mapyandex h3 {
+  text-transform: uppercase;
+  font-size: 20px;
+  text-align: center;
+  padding-bottom: 30px;
+}
+#map {
+  max-width: 1170px;
+  margin: 0 auto; 
+
+}
 /* Contact */
 #contacts {
   width: 100%;
@@ -1033,25 +1048,25 @@ footer {
 }
 
 /* Form №1 */
-#form {
+#form_cont {
   padding: 40px;
   border: 1px solid #fff;
 }
 
-#form input {
+#form_cont input {
   display: grid;
   width: 80%;
   color: #fff;
   font-size: 16px;
 }
 
-#form input::-webkit-input-placeholder {
+#form_cont input::-webkit-input-placeholder {
   font-size: 16px;
   color: #f9f8f8;
 }
 
-#form input[type="text"],
-#form input[type="tel"] {
+#form_cont input[type="text"],
+#form_cont input[type="tel"] {
   border-bottom: 1px solid #fff;
   background: none;
   border-right: unset;
@@ -1061,7 +1076,7 @@ footer {
   margin: 0 auto 20px;
 }
 
-#form input[type="button"] {
+#form_cont input[type="button"] {
   margin-bottom: 10px;
   border: 1px solid #e4d01b;
   outline: 0;
@@ -1072,12 +1087,12 @@ footer {
   cursor: pointer;
 }
 
-#form input[type="button"]:hover {
+#form_cont input[type="button"]:hover {
   border: 1px solid #fff;
   background: none;
 }
 
-#form p {
+#form_cont p {
   font-size: 12px;
   width: 80%;
   margin: 30px auto 0;
