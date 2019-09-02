@@ -857,11 +857,11 @@ header {
   margin: 30px auto 30px;
   height: auto;
   overflow: hidden;
-  border: 1px solid black;
+
 }
 
 #wrap_slids {
-  border: 1px solid red;
+
   display: flex;
   justify-content: flex-start;
   position: relative;
