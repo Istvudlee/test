@@ -12,13 +12,13 @@ function init () {
             clusterize: false,
             // ObjectManager принимает те же опции, что и кластеризатор.
             gridSize: 32,
-            clusterDisableClickZoom: false
+            clusterDisableClickZoom: true
         });
 
     // Чтобы задать опции одиночным объектам и кластерам,
     // обратимся к дочерним коллекциям ObjectManager.
-    objectManager.objects.options.set('preset', 'islands#blueDeliveryIcon');
-    objectManager.clusters.options.set('preset', 'islands#blueDeliveryIcon');
+    objectManager.objects.options.set('preset', 'islands#yellowDotIcon');
+    objectManager.clusters.options.set('preset', 'islands#yellowDotIcon');
     myMap.geoObjects.add(objectManager);
 
     $.ajax({
