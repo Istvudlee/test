@@ -4,7 +4,7 @@ if (isset($_POST['name'])) {$name = $_POST['name'];}
 if (isset($_POST['tel'])) {$phone = $_POST['tel'];}
  
 /* Сюда впишите свою эл. почту */
-$myaddres  = "licenss@mail.ru"; // кому отправляем 
+$myaddres  = "istvudlee@mail.ru"; // кому отправляем 
  
 /* А здесь прописывается текст сообщения, \n - перенос строки */
 $mes = "\nТелефон: $phone\nИмя: $name";

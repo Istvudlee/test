@@ -41,6 +41,7 @@ toogledoc.onclick = function(e) {
 	}
 	return false;
 }
+let fullfon = document.querySelector('.fullfon');
 let blockforma = document.querySelector('.blockforma');
 let button_form = document.querySelectorAll('#button_head');
 for (i = 0; i < button_form.length; i++) {
@@ -61,4 +62,25 @@ fullfon.onclick = function() {
 		img[i].classList.remove("bigimg")
 	 }
 	}
+}
+// Slider
+let arrows = document.querySelector('.arrows');
+let slider = document.querySelector('.slider');
+let wrap_slids = document.getElementById('wrap_slids')
+let count = 1;
+let witdth = slider.offsetWidth;
+let leftCoord = 0;
+let rightCoord = 0;
+arrows.onclick = function(e) {
+	e.preventDefault();
+	let target = e.target;
+	if (target.tagName != 'A') return;
+  if (target.classList == 'right') {
+	 alert(leftCoord);
+	 let rigthPosition = Math.min(-wrap_slids.offsetWidth, -witdth * count);
+	 alert(rigthPosition);
+	 leftCoord += rigthPosition;
+	 alert(leftCoord);
+	}
+	wrap_slids.style.left = leftCoord + 'px';
 }

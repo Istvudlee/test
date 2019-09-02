@@ -276,8 +276,8 @@ header {
   background-image: url('../img/smartphone.svg');
   background-size: 25px 25px;
   background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
+  width: 25px;
+  height: 25px;
   position: absolute;
   left: 0;
 }
@@ -597,26 +597,29 @@ header {
 }
 
 .warp_fine p {
-  font-size: 18px;
+  font-size: 16px;
 }
-
 .warp_fine h4 {
   position: relative;
   text-transform: uppercase;
   font-weight: normal;
-  padding-left: 60px;
+  padding-left: 50px;
   line-height: 60px;
   font-size: 24px;
 }
-
+.warp_fine .small_header {
+  font-size: 14px;
+  color: #000;
+  padding-top: 5px;
+}
 .warp_fine h4::before {
   content: '';
-  background-image: url('../img/bribe1.svg');
+  background-image: url('../img/bribe.svg');
   background-size: 50px 50px;
   background-repeat: no-repeat;
   width: 50px;
   height: 50px;
-  left: 19%;
+  left: 35%;
   position: absolute;
 }
 
@@ -854,17 +857,22 @@ header {
   margin: 30px auto 30px;
   height: auto;
   overflow: hidden;
-  /* border: 1px solid black; */
+  border: 1px solid black;
 }
 
 #wrap_slids {
-  /* border: 1px solid red; */
+  border: 1px solid red;
   display: flex;
   justify-content: flex-start;
+  position: relative;
+  left: 0;
+  right: 0;
+  transition: ease-in-out 1s;
 }
 
 .slider {
-  flex: 0 0 100%
+  flex: 0 0 100%;
+ 
 }
 
 .arrows {
@@ -916,17 +924,42 @@ header {
 /* Map Yandex */
 #mapyandex {
   width: 100%;
+  padding-bottom: 30px;
 }
 #mapyandex h3 {
   text-transform: uppercase;
   font-size: 20px;
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 15px;
 }
 #map {
   max-width: 1170px;
   margin: 0 auto; 
-
+  border: 1px solid #e4d01b;
+}
+.wrap_part {
+  max-width: 1170px;
+  margin: 25px auto 0;
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: auto auto auto auto auto auto;
+}
+.partner {
+  font-size: 14px;
+  padding-top: 5px;
+}
+.partner p {
+  padding-bottom: 5px;
+}
+.partner .city {
+  font-weight: bold;
+}
+.zagl {
+  text-align: center;
+  padding-bottom: 15px;
+}
+.zagl span {
+  font-weight: bold;
 }
 /* Contact */
 #contacts {
@@ -1374,13 +1407,14 @@ input[type="submit"]:hover {
   }
 
   .warp_fine p {
-    padding-left: 18%;
+    padding-left: 15%;
     padding-top: 10px;
-    font-size: 16px;
+    font-size: 18px;
   }
 
   .warp_fine h4::before {
     left: 0;
+    bottom: 0;
   }
 
   /* Why */
@@ -1478,6 +1512,9 @@ input[type="submit"]:hover {
     padding-bottom: 10px;
     height: auto;
     background-position: center center;
+  }
+  #mapyandex {
+    display: none;
   }
 }
 
