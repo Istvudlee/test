@@ -12,7 +12,7 @@ function init () {
             clusterize: true,
             // ObjectManager принимает те же опции, что и кластеризатор.
             gridSize: 32,
-            clusterDisableClickZoom: true
+            clusterDisableClickZoom: false
         });
 
     // Чтобы задать опции одиночным объектам и кластерам,
