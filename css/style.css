@@ -861,12 +861,9 @@ header {
 }
 
 #wrap_slids {
-
   display: flex;
-  justify-content: flex-start;
   position: relative;
   left: 0;
-  right: 0;
   transition: ease-in-out 1s;
 }
 
@@ -876,7 +873,6 @@ header {
 }
 
 .arrows {
-  margin-top: 50px;
 }
 
 .text_comments h5 {
@@ -1447,7 +1443,7 @@ input[type="submit"]:hover {
   }
 
   .toogledoc {
-    width: auto;
+    width: 92%;
 
   }
 
@@ -1488,7 +1484,7 @@ input[type="submit"]:hover {
   }
 
   .img_comments img {
-    width: 92%;
+    width: 100%;
   }
 
   .arrows {

@@ -63,24 +63,26 @@ fullfon.onclick = function() {
 	 }
 	}
 }
-// Slider
-// let arrows = document.querySelector('.arrows');
-// let slider = document.querySelector('.slider');
-// let wrap_slids = document.getElementById('wrap_slids')
-// let count = 1;
-// let witdth = slider.offsetWidth;
-// let leftCoord = 0;
-// let rightCoord = 0;
-// arrows.onclick = function(e) {
-// 	e.preventDefault();
-// 	let target = e.target;
-// 	if (target.tagName != 'A') return;
-//   if (target.classList == 'right') {
-// 	 alert(leftCoord);
-// 	 let rigthPosition = Math.min(-wrap_slids.offsetWidth, -witdth * count);
-// 	 alert(rigthPosition);
-// 	 leftCoord += rigthPosition;
-// 	 alert(leftCoord);
-// 	}
-// 	wrap_slids.style.left = leftCoord + 'px';
-// }
+// Comments
+let arrows = document.querySelector('.arrows');
+let slider = document.querySelectorAll('.slider');
+let wrapSlids = document.getElementById('wrap_slids')
+let count = 1;
+let witdth = slider[1].offsetWidth;
+let position = 0;
+arrows.onclick = function(e) {
+	e.preventDefault();
+	let target = e.target;
+	if (target.tagName != 'A') return;
+  if (target.classList == 'right') {
+	 position -= witdth;
+	 let rigthPosition = Math.max(position, -witdth * (slider.length - count));
+	 position = rigthPosition;
+	}
+	if (target.classList == 'left') {
+		position += witdth;
+		let rigthPosition = Math.min(0, position);
+		position = rigthPosition;
+	 }
+	wrap_slids.style.left = position + 'px';
+}
