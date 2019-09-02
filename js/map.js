@@ -9,7 +9,7 @@ function init () {
         }),
         objectManager = new ymaps.ObjectManager({
             // Чтобы метки начали кластеризоваться, выставляем опцию.
-            clusterize: false,
+            clusterize: true,
             // ObjectManager принимает те же опции, что и кластеризатор.
             gridSize: 32,
             clusterDisableClickZoom: true
@@ -17,8 +17,8 @@ function init () {
 
     // Чтобы задать опции одиночным объектам и кластерам,
     // обратимся к дочерним коллекциям ObjectManager.
-    objectManager.objects.options.set('preset', 'islands#greenDotIcon');
-    objectManager.clusters.options.set('preset', 'islands#greenClusterIcons');
+    objectManager.objects.options.set('preset', 'islands#blueDeliveryIcon');
+    objectManager.clusters.options.set('preset', 'islands#blueDeliveryIcon');
     myMap.geoObjects.add(objectManager);
 
     $.ajax({
