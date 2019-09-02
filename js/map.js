@@ -1,29 +1,17 @@
-ymaps.ready(init);
-
-function init () {
-    var myMap = new ymaps.Map('map', {
-            center: [54.867083, 69.134048],
-            zoom: 4
-        }, {
-            searchControlProvider: 'yandex#search'
-        }),
-        objectManager = new ymaps.ObjectManager({
-            // Чтобы метки начали кластеризоваться, выставляем опцию.
-            clusterize: true,
-            // ObjectManager принимает те же опции, что и кластеризатор.
-            gridSize: 32,
-            clusterDisableClickZoom: true
-        });
-
-    // Чтобы задать опции одиночным объектам и кластерам,
-    // обратимся к дочерним коллекциям ObjectManager.
-    objectManager.objects.options.set('preset', 'islands#yellowDotIcon');
-    myMap.geoObjects.add(objectManager);
-
-    $.ajax({
-        url: "data.json"
-    }).done(function(data) {
-        objectManager.add(data);
+ymaps.ready(function(){
+      let coords = [[46.347869, 48.033574],[53.243562, 34.363407],[48.707073, 44.516930],[47.516545, 42.198423],[56.238377, 43.461625],[55.437168, 37.767995],[56.631595, 47.886178],[55.796289, 49.108795],[55.354727, 86.088374],[55.103152, 38.752917],[57.767961, 40.926858],[54.663609, 86.162243],[44.608865, 40.098548],[53.757547, 87.136044],[55.740776, 52.406384],[51.768199, 55.096955],[53.195063, 45.018316],[53.884487, 86.750055],[58.010374, 56.229398],[44.039290, 43.070840],[45.389194, 33.993751],[54.205758, 44.319669],[53.511654, 49.233705],[59.939095, 30.315868],[51.533103, 46.034158],[53.508816, 49.419207],[56.859847, 35.911995],[54.314192, 48.403123],[54.735147, 55.958727],[56.146277, 47.251079],[55.046414, 60.108081]];
+      
+      let myMap = new ymaps.Map("map", {
+        center: [55.740776, 52.406384],
+        zoom: 4,
+        controls: ['zoomControl']
+      });
+      
+      for (let i = 0; i < coords.length; ++i) {
+       let createMap = new ymaps.Placemark(coords[i], {}, {
+        preset: 'islands#icon',
+        iconColor: '#e4d01b'
     });
-
-}
+        myMap.geoObjects.add(createMap);
+      }
+  });
