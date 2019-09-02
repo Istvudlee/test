@@ -9,7 +9,7 @@ function init () {
         }),
         objectManager = new ymaps.ObjectManager({
             // Чтобы метки начали кластеризоваться, выставляем опцию.
-            clusterize: true,
+            clusterize: false,
             // ObjectManager принимает те же опции, что и кластеризатор.
             gridSize: 32,
             clusterDisableClickZoom: true
