@@ -258,6 +258,7 @@ header {
   border-bottom: 1px dashed #000;
   color: #000;
   float: right;
+  padding-top: 4px;
 }
 
 .phone_link {
@@ -696,10 +697,11 @@ header {
 .fourthwr {
   background: #fff;
   max-width: 1170px;
-  margin: 30px auto;
+  margin: 0 auto;
 }
 
 #fourth h3 {
+  padding-top: 30px;
   text-transform: uppercase;
   font-size: 20px;
   text-align: center;
@@ -780,18 +782,18 @@ header {
 /* questions */
 #questions {
   width: 100%;
-  margin-top: 30px;
 }
 
 #questions h3 {
   text-align: center;
   text-transform: uppercase;
   font-size: 20px;
+  padding-top: 30px;
 }
 
 .warp_questions {
   max-width: 1170px;
-  margin: 30px auto;
+  margin: 30px auto 0;
 }
 
 .blck_question span {
@@ -847,6 +849,7 @@ header {
 }
 
 #comments h3 {
+  padding-top: 30px;
   text-align: center;
   text-transform: uppercase;
   font-size: 20px;
@@ -1105,7 +1108,7 @@ footer {
   margin: 0 auto 20px;
 }
 
-#form_cont input[type="button"] {
+#form_cont input[type="submit"] {
   margin-bottom: 10px;
   border: 1px solid #e4d01b;
   outline: 0;
@@ -1135,7 +1138,9 @@ footer {
   z-index: 1;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, .9)
+  background: rgba(255, 255, 255, .9);
+  background-image: url(../img/back_form.jpg);
+  background-position: left center;
 }
 
 .fullopen {
@@ -1150,7 +1155,8 @@ footer {
   text-align: center;
   max-width: 500px;
   padding: 40px;
-  background: #3C47AE;
+  background: #fff;
+  border: 1px solid #e4d01b;
   color: #fff;
   z-index: 150;
 }
@@ -1164,7 +1170,6 @@ footer {
 .results p {
   font-size: 16px;
 }
-
 /* Forma */
 .blockforma {
   top: 0;
@@ -1172,27 +1177,30 @@ footer {
   line-height: normal;
   position: fixed;
   z-index: 10;
-  background: #3C47AE;
+  background: rgba(255, 255, 255, .8);
+  border: 1px solid #fff;
   max-width: 450px;
-  color: #fff;
+  color: #000;
   height: auto;
   display: grid;
   justify-content: space-evenly;
   grid-template-columns: 92%;
+  border: 1px solid #000;
 }
 
 input[type="submit"] {
-  background: #3C47AE;
+  background: #e4d01b;
   border: 1px solid #fff;
   text-transform: uppercase;
-  color: #fff;
+  color: #000;
   font-weight: bold;
+  cursor: pointer;
 }
 
 input[type="submit"]:hover {
   background: #fff;
-  border: 1px solid #fff;
-  color: #3C47AE;
+  border: 1px solid #e4d01b;
+  color: #e4d01b;
 }
 
 .show-form {
@@ -1200,7 +1208,7 @@ input[type="submit"]:hover {
 }
 
 .blockforma h5 {
-  font-size: 20px;
+  font-size: 18px;
   padding-bottom: 40px;
   padding-top: 40px;
   font-family: 'Roboto', sans-serif;
@@ -1213,11 +1221,23 @@ input[type="submit"]:hover {
   align-items: center;
 }
 
+.blockforma form input::-webkit-input-placeholder {
+  font-size: 14px;
+  color: #000;
+}
+
 .blockforma form input {
   margin-bottom: 5px;
   padding: 15px;
+  outline: none;
+  border: 1px solid #000;
 }
-
+.blockforma form input:-webkit-autofill {
+  -webkit-text-fill-color:#000 ;
+  color: #000;
+  outline: none;
+  border: 1px solid #000;
+}
 #textch {
   padding-top: 40px;
   font-size: 12px;
@@ -1532,6 +1552,7 @@ input[type="submit"]:hover {
     margin: 0;
     width: 100%
   }
+
 }
 
 @media (max-width: 320px) {

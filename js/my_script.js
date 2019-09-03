@@ -43,7 +43,7 @@ toogledoc.onclick = function(e) {
 }
 let fullfon = document.querySelector('.fullfon');
 let blockforma = document.querySelector('.blockforma');
-let button_form = document.querySelectorAll('#button_head');
+let button_form = document.querySelectorAll('#button_head, #button_proc, #button');
 for (i = 0; i < button_form.length; i++) {
 	button_form[i].onclick = function(e) {
 		e.preventDefault();
@@ -57,11 +57,6 @@ for (i = 0; i < button_form.length; i++) {
 fullfon.onclick = function() {
 	fullfon.classList.remove('fullopen');
 	blockforma.classList.add('show-form');
-	for (i = 0; i < img.length; i++) {
-   if(img[i].classList.contains("bigimg")){
-		img[i].classList.remove("bigimg")
-	 }
-	}
 }
 // Comments
 let arrows = document.querySelector('.arrows');

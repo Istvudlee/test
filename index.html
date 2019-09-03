@@ -29,13 +29,13 @@
 					<p>Меню</p><span></span>
 				</div>
 				<ul class="menu_ul mobmenu_show">
-					<li><a href="">Карта МАП</a></li>
-					<li><a href="">Лицензия перевозок</a></li>
-					<li><a href="">Как получить?</a></li>
-					<li><a href="">FAQ</a></li>
-					<li><a href="">Документы</a></li>
-					<li><a href="">Отзывы</a></li>
-					<li><a href="">Контакты</a></li>
+					<li><a href="#map_block">Карта МАП</a></li>
+					<li><a href="#international_block">Лицензия перевозок</a></li>
+					<li><a href="#process">Как получить?</a></li>
+					<li><a href="#questions">FAQ</a></li>
+					<li><a href="#fourth">Документы</a></li>
+					<li><a href="#comments">Отзывы</a></li>
+					<li><a href="#contacts">Контакты</a></li>
 				</ul>
 				<a href="mailto:kartamap18@yandex.ru" class="mail mobmenu_show">kartamap18@yandex.ru</a>
 				<p class="work_hour mobmenu_show">Работаем с 9 до 19</p>
@@ -59,7 +59,7 @@
 						</div>
 						<div class="term">
 							<p>Срок изготовления: 1-2 недели</p>
-							<a href=""><span>Подробнее</span></a>
+							<a href="#map_block"><span>Подробнее</span></a>
 						</div>
 					</div>
 					<div class="bl_map">
@@ -69,7 +69,7 @@
 						</div>
 						<div class="term">
 							<p>Срок оформления: 30 дней</p>
-							<a href=""><span>Подробнее</span></a>
+							<a href="#international_block"><span>Подробнее</span></a>
 						</div>
 					</div>
 				</div>
@@ -156,7 +156,7 @@
 		</div> -->
 	</div>
 	<div id="international_block">
-		<h3>ДОПУСК К МЕЖДУНАРОДНЫМ ПЕРЕВОЗКАМ</h3>
+		<h3>лицензия на международные перевозки</h3>
 		<div class="international_map">
 			<div class="img_international"> <img src="img/lic3.jpg" alt=""></div>
 			<div class="textmap">
@@ -224,7 +224,7 @@
 					</ul>
 				</div>
 				<div class="contentdoc twobldoc">
-					<p class="downipdoc"> Весь список одним файлом: <a href="IPdoc.docx"><span></span>Скачть в формате .doc</a>
+					<p class="downipdoc"> Весь список одним файлом: <a href="doc/map.docx"><span></span>Скачть в формате .doc</a>
 					</p>
 				</div>
 			</div>
@@ -244,7 +244,7 @@
 					</ul>
 				</div>
 				<div class="contentdoc twobldoc">
-					<p class="downipdoc"> Весь список одним файлом: <a href="OOOdoc.docx"><span></span> Скачть в формате .doc</a>
+					<p class="downipdoc"> Весь список одним файлом: <a href="doc/map.docx"><span></span> Скачть в формате .doc</a>
 					</p>
 				</div>
 			</div>
@@ -491,12 +491,12 @@
 			</div>
 			<div class="form_blcok">
 				<h3>Отправить заявку</h3>
-				<form action="" id="form_cont">
-					<input type="text" name="" id="" required="" pattern="[А-Яа-яЁё]{4,}" placeholder="Ваше Имя" maxlength="10"
+				<form method="post" action="mail.php" id="form_cont">
+					<input type="text" name="name" required pattern="[А-Яа-яЁё]{4,}" autocomplete="off" placeholder="Ваше Имя" maxlength="10"
 						title="Имя должно быть на русском. Пример: Степа, Петя, Вася, Оля">
-					<input type="tel" name="" id="" required="" pattern="\+[0-9]{1}[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}"
+					<input type="tel" name="tel" autocomplete="off" required pattern="\+[0-9]{1}[0-9]{3}[0-9]{3}[0-9]{2}[0-9]{2}"
 						maxlength="12" placeholder="+ 7" title="Номер должен начинаться с + 7 и далее без пробелов">
-					<input type="button" value="ОТПРАВИТЬ">
+					<input type="submit" value="ОТПРАВИТЬ">
 					<p>Нажимая кнопку «Отправить», я даю своё согласие на обработку моих персональных данных в соответствии с
 						Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей,
 						определенных политикой конфиденциальности сайта.</p>
@@ -517,7 +517,7 @@
 			<input type="submit" name="subscribe" value="Отправить">
 
 		</form>
-		<div id="textch"><input type="checkbox" checked="">
+		<div id="textch">
 			<p>Нажимая кнопку «Отправить», я даю своё согласие на обработку моих персональных данных в соответствии с
 				Федеральным законом от 27.07.2006 года №152-ФЗ «О персональных данных», на условиях и для целей, определенных <a
 					href="privacy-policy.html">политикой конфиденциальности</a> сайта.</p>
