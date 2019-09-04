@@ -1,67 +1,6 @@
 @import url(http://allfont.ru/allfont.css?fonts=futura-normal);
-
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-font,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td {
+ 
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
   margin: 0;
   padding: 0;
   border: 0;
@@ -282,7 +221,10 @@ header {
   position: absolute;
   left: 0;
 }
-
+.phone_link span {
+  color: #3a5cb7;
+  font-weight: 600;
+}
 /* service */
 .service {
   padding-top: 30px;
@@ -600,6 +542,7 @@ header {
 .warp_fine p {
   font-size: 16px;
 }
+
 .warp_fine h4 {
   position: relative;
   text-transform: uppercase;
@@ -608,11 +551,13 @@ header {
   line-height: 60px;
   font-size: 24px;
 }
+
 .warp_fine .small_header {
   font-size: 14px;
   color: #000;
   padding-top: 5px;
 }
+
 .warp_fine h4::before {
   content: '';
   background-image: url('../img/bribe.svg');
@@ -872,10 +817,7 @@ header {
 
 .slider {
   flex: 0 0 100%;
- 
-}
 
-.arrows {
 }
 
 .text_comments h5 {
@@ -925,17 +867,20 @@ header {
   width: 100%;
   padding-bottom: 30px;
 }
+
 #mapyandex h3 {
   text-transform: uppercase;
   font-size: 20px;
   text-align: center;
   padding-bottom: 15px;
 }
+
 #map {
   max-width: 1170px;
-  margin: 0 auto; 
+  margin: 0 auto;
   border: 1px solid #e4d01b;
 }
+
 .wrap_part {
   max-width: 1170px;
   margin: 25px auto 0;
@@ -943,23 +888,30 @@ header {
   justify-content: space-between;
   grid-template-columns: auto auto auto auto auto auto;
 }
+
 .partner {
   font-size: 14px;
   padding-top: 5px;
 }
+
 .partner p {
   padding-bottom: 5px;
 }
+
 .partner .city {
   font-weight: bold;
 }
+
 .zagl {
   text-align: center;
   padding-bottom: 15px;
 }
+
 .zagl span {
-  font-weight: bold;
+  color: #3a5cb7;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
+
 /* Contact */
 #contacts {
   width: 100%;
@@ -1073,7 +1025,10 @@ footer {
   font-size: 14px;
   border-bottom: 1px dashed #fff;
 }
-
+.politic a:hover {
+  color: #000;
+  border-bottom: 1px dashed #000;
+}
 .copyright {
   padding-top: 10px;
   font-size: 12px;
@@ -1129,7 +1084,14 @@ footer {
   width: 80%;
   margin: 30px auto 0;
 }
-
+#form_cont a {
+  color: #000;
+  border-bottom: 1px dashed #000;
+}
+#form_cont a:hover {
+  border-bottom: 1px dashed #fff;
+  color: #FFF; 
+}
 /* Form2 */
 .fullfon {
   display: none;
@@ -1170,6 +1132,7 @@ footer {
 .results p {
   font-size: 16px;
 }
+
 /* Forma */
 .blockforma {
   top: 0;
@@ -1232,12 +1195,14 @@ input[type="submit"]:hover {
   outline: none;
   border: 1px solid #000;
 }
+
 .blockforma form input:-webkit-autofill {
-  -webkit-text-fill-color:#000 ;
+  -webkit-text-fill-color: #000;
   color: #000;
   outline: none;
   border: 1px solid #000;
 }
+
 #textch {
   padding-top: 40px;
   font-size: 12px;
@@ -1254,9 +1219,13 @@ input[type="submit"]:hover {
 }
 
 #textch a {
-  color: #000
+  color: #e4d01b;
+ border-bottom: 1px dashed #e4d01b;
 }
-
+#textch a:hover {
+  color: #000;
+  border-bottom: 1px dashed #000;
+}
 /* end Forma */
 /* Мобильная */
 @media (max-width: 900px) {
@@ -1512,6 +1481,8 @@ input[type="submit"]:hover {
     justify-content: space-between;
     margin-top: 20px;
     margin-bottom: 20px;
+    width: 92%;
+    margin: 0 auto 30px;
   }
 
   .text_comments p {
@@ -1529,6 +1500,7 @@ input[type="submit"]:hover {
     height: auto;
     background-position: center center;
   }
+
   #mapyandex {
     display: none;
   }
