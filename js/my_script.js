@@ -87,7 +87,8 @@ window.addEventListener('load', function () {
 	let slaidMob = document.querySelector('.slider');
 	let start,
 		  touchFinger,
-		  finish;
+			finish,
+			summaSwipe;
 	slider[i].addEventListener('touchstart', function (e) {
 		touchFinger = e.changedTouches[0];
 		start = touchFinger.clientX;
@@ -96,11 +97,13 @@ window.addEventListener('load', function () {
 	slider[i].addEventListener('touchend', function (e) {
 		let touchFinger = e.changedTouches[0];
 		finish = touchFinger.clientX;
+		summaSwipe = start + finish;
 		console.log(start);
 		console.log(finish);
-		if (start > finish) {
+		console.log(summaSwipe);
+		if (start > finish && summaSwipe > 300) {
 			swipe('right');
-		} else if (start < finish) {
+		} else if (start < finish && summaSwipe > 300) {
 			swipe('left');
 		}
 	});
