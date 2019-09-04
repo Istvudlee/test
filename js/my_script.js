@@ -81,3 +81,36 @@ arrows.onclick = function(e) {
 	 }
 	wrap_slids.style.left = position + 'px';
 }
+let slaidMob = document.querySelector('.slider')
+let start,
+    touchFinger,
+    finish;
+slaidMob.addEventListener('touchstart', function(e) {
+	  touchFinger = e.changedTouches[0];
+		start = touchFinger.clientX;
+		
+});
+slaidMob.addEventListener('touchend', function(e) {
+	let touchFinger = e.changedTouches[0];
+	finish = touchFinger.clientX;
+	if (start > finish) {
+		swipe('right');
+	} else if (start < finish) {
+		swipe('left');
+	}
+});
+function swipe(direction) {
+  switch(direction) {
+		case 'right':  
+		position -= witdth;
+		let leftPosition = Math.max(position, -witdth * (slider.length - count));
+		position = leftPosition;
+		break;
+		case 'left': 
+		position += witdth;
+		leftPosition = Math.min(0, position);
+		position = leftPosition; 
+		break;
+	}
+	wrap_slids.style.left = position + 'px';
+}
