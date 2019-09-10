@@ -634,6 +634,27 @@ header {
   text-decoration: underline;
 }
 
+/* WHy 2*/
+#block_why_two {
+  width: 100%;
+  background-image: url(../img/why_gbdd.jpg);
+  background-repeat: no-repeat;
+  background-position: center right;
+  margin: 50px auto 0;
+  background-color: #f9f8f8
+}
+#block_why_two  .text_why {
+  padding: 20px 20px 20px 0px;
+  background: #f9f8f8;
+}
+#block_why_two  .text_why p {
+  padding-left: 0px;
+  padding-bottom: 10px;
+}
+#block_why_two .text_why h3 {
+  text-transform: uppercase;
+  padding: 15px 15px 15px 0px;
+}
 /* fourth Screen */
 #fourth {
   width: 100%;
@@ -1424,7 +1445,16 @@ input[type="submit"]:hover {
   .text_why h3 {
     padding-left: 0;
   }
+/* Why */
 
+
+#block_why_two .text_why p {
+  padding-left: 15px;
+}
+
+#block_why_two .text_why h3 {
+  padding-left: 15px;
+}
   /* Document */
   .show {
     justify-content: space-evenly;
