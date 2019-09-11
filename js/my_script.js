@@ -58,70 +58,70 @@ fullfon.onclick = function () {
 	fullfon.classList.remove('fullopen');
 	blockforma.classList.add('show-form');
 }
-// Comments
-let arrows = document.querySelector('.arrows');
-let slider = document.querySelectorAll('.slider');
-let wrapSlids = document.getElementById('wrap_slids')
-let count = 1;
-let witdth = slider[1].offsetWidth;
-let position = 0;
-arrows.onclick = function (e) {
-	e.preventDefault();
-	let target = e.target;
-	if (target.tagName != 'A') return;
-	if (target.classList == 'right') {
-		position -= witdth;
-		let rigthPosition = Math.max(position, -witdth * (slider.length - count));
-		position = rigthPosition;
-	}
-	if (target.classList == 'left') {
-		position += witdth;
-		let rigthPosition = Math.min(0, position);
-		position = rigthPosition;
-	}
-	wrap_slids.style.left = position + 'px';
-}
-// SWIPE TEST
-window.addEventListener('load', function () {
-	for (i=0; i < slider.length; i++) {
-	let slaidMob = document.querySelector('.slider');
-	let start,
-		  touchFinger,
-			finish,
-			summaSwipe;
-	slider[i].addEventListener('touchstart', function (e) {
-		touchFinger = e.changedTouches[0];
-		start = touchFinger.clientX;
+// // Comments
+// let arrows = document.querySelector('.arrows');
+// let slider = document.querySelectorAll('.slider');
+// let wrapSlids = document.getElementById('wrap_slids')
+// let count = 1;
+// let witdth = slider[1].offsetWidth;
+// let position = 0;
+// arrows.onclick = function (e) {
+// 	e.preventDefault();
+// 	let target = e.target;
+// 	if (target.tagName != 'A') return;
+// 	if (target.classList == 'right') {
+// 		position -= witdth;
+// 		let rigthPosition = Math.max(position, -witdth * (slider.length - count));
+// 		position = rigthPosition;
+// 	}
+// 	if (target.classList == 'left') {
+// 		position += witdth;
+// 		let rigthPosition = Math.min(0, position);
+// 		position = rigthPosition;
+// 	}
+// 	wrap_slids.style.left = position + 'px';
+// }
+// // SWIPE TEST
+// window.addEventListener('load', function () {
+// 	for (i=0; i < slider.length; i++) {
+// 	let slaidMob = document.querySelector('.slider');
+// 	let start,
+// 		  touchFinger,
+// 			finish,
+// 			summaSwipe;
+// 	slider[i].addEventListener('touchstart', function (e) {
+// 		touchFinger = e.changedTouches[0];
+// 		start = touchFinger.clientX;
 
-	});
-	slider[i].addEventListener('touchend', function (e) {
-		let touchFinger = e.changedTouches[0];
-		finish = touchFinger.clientX;
-		summaSwipe = start + finish;
-		console.log(start);
-		console.log(finish);
-		console.log(summaSwipe);
-		if (start > finish && summaSwipe > 300) {
-			swipe('right');
-		} else if (start < finish && summaSwipe > 300) {
-			swipe('left');
-		}
-	});
+// 	});
+// 	slider[i].addEventListener('touchend', function (e) {
+// 		let touchFinger = e.changedTouches[0];
+// 		finish = touchFinger.clientX;
+// 		summaSwipe = start + finish;
+// 		console.log(start);
+// 		console.log(finish);
+// 		console.log(summaSwipe);
+// 		if (start > finish && summaSwipe > 300) {
+// 			swipe('right');
+// 		} else if (start < finish && summaSwipe > 300) {
+// 			swipe('left');
+// 		}
+// 	});
 
-	function swipe(direction) {
-		switch (direction) {
-			case 'right':
-				position -= witdth;
-				let leftPosition = Math.max(position, -witdth * (slider.length - count));
-				position = leftPosition;
-				break;
-			case 'left':
-				position += witdth;
-				leftPositionTwo = Math.min(0, position);
-				position = leftPositionTwo;
-				break;
-		}
-		wrap_slids.style.left = position + 'px';
-	}
- }	
-});
+// 	function swipe(direction) {
+// 		switch (direction) {
+// 			case 'right':
+// 				position -= witdth;
+// 				let leftPosition = Math.max(position, -witdth * (slider.length - count));
+// 				position = leftPosition;
+// 				break;
+// 			case 'left':
+// 				position += witdth;
+// 				leftPositionTwo = Math.min(0, position);
+// 				position = leftPositionTwo;
+// 				break;
+// 		}
+// 		wrap_slids.style.left = position + 'px';
+// 	}
+//  }	
+// });

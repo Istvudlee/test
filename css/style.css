@@ -194,6 +194,7 @@ header {
 
 .right_all .link {
   font-size: 12px;
+  font-weight: bold;
   border-bottom: 1px dashed #000;
   color: #000;
   float: right;
@@ -222,7 +223,7 @@ header {
   left: 0;
 }
 .phone_link span {
-  color: #3a5cb7;
+  color: #000;
   font-weight: 600;
 }
 /* service */
@@ -554,7 +555,7 @@ header {
 
 .warp_fine .small_header {
   font-size: 14px;
-  color: #000;
+  color: #e4d01b;
   padding-top: 5px;
 }
 
@@ -887,6 +888,7 @@ header {
 #mapyandex {
   width: 100%;
   padding-bottom: 30px;
+  margin-top: 30px;
 }
 
 #mapyandex h3 {
@@ -965,7 +967,7 @@ header {
   margin-bottom: 30px;
 }
 
-.cont_info h5 {
+/* .cont_info h5 {
   color: #FFF;
   position: relative;
   padding-left: 35px;
@@ -991,6 +993,28 @@ header {
 
 .requisite p b {
   font-size: 14px;
+} */
+.postsc {
+  max-width: 400px;
+}
+.postsc h5 {
+  color: #FFF;
+  position: relative;
+  padding-left: 35px;
+  display: block;
+  line-height: 25px;
+  font-weight: normal;
+  font-size: 14px;
+}
+.postsc h5::before {
+  content: '';
+  background-image: url(../img/agreement.svg);
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
 }
 
 .cont_info a {
@@ -1106,8 +1130,8 @@ footer {
   margin: 30px auto 0;
 }
 #form_cont a {
-  color: #000;
-  border-bottom: 1px dashed #000;
+  color: #e4d01b;
+  border-bottom: 1px dashed #e4d01b;
 }
 #form_cont a:hover {
   border-bottom: 1px dashed #fff;
@@ -1138,8 +1162,8 @@ footer {
   text-align: center;
   max-width: 500px;
   padding: 40px;
-  background: #fff;
-  border: 1px solid #e4d01b;
+  background: #e4d01b;
+  border: 1px solid #fff;
   color: #fff;
   z-index: 150;
 }
@@ -1413,7 +1437,7 @@ input[type="submit"]:hover {
   }
 
   .warp_fine p {
-    padding-left: 15%;
+    padding-left: 16%;
     padding-top: 10px;
     font-size: 18px;
   }
@@ -1526,6 +1550,7 @@ input[type="submit"]:hover {
   }
 
   #contacts {
+    margin-top: 30px;
     padding-bottom: 10px;
     height: auto;
     background-position: center center;
@@ -1554,12 +1579,16 @@ input[type="submit"]:hover {
     margin: 0;
     width: 100%
   }
-
+  .warp_fine p {
+    padding-left: 16%;
+  }
 }
 
 @media (max-width: 320px) {
   .license img {
     width: 48%;
   }
-
+  .warp_fine p {
+    padding-left: 19%;
+  }
 }
