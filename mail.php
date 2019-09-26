@@ -4,14 +4,14 @@ if (isset($_POST['name'])) {$name = $_POST['name'];}
 if (isset($_POST['tel'])) {$phone = $_POST['tel'];}
  
 /* Сюда впишите свою эл. почту */
-$myaddres  = "kartamap18@yandex.ru"; // кому отправляем 
+$myaddres  = "sedoi787@yandex.ru"; // кому отправляем 
  
 /* А здесь прописывается текст сообщения, \n - перенос строки */
 $mes = "\nТелефон: $phone\nИмя: $name";
  
 /* А эта функция как раз занимается отправкой письма на указанный вами email */
-$sub='Заказ c сайта МапКарта.рф'; //сабж
-$email='МапКарта.рф'; // от кого
+$sub='Заказ c сайта volosoff13.ru.рф'; //сабж
+$email='volosoff13.ru.рф'; // от кого
 $send = mail ($myaddres,$sub,$mes,"Content-type:text/plain; charset = utf-8\r\nFrom:$email");
  
 ini_set('short_open_tag', 'On');
